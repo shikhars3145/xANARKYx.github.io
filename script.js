@@ -283,6 +283,7 @@ let setQuiz = (quizname)=>{
 }
 let startQuiz = ()=>{
     result.style.display="none";
+    document.querySelector(".exp-container").innerHTML="";
     document.querySelector(".start-quiz").style.display="none";
     quiz.style.display="block";
     wrong = new Array();
