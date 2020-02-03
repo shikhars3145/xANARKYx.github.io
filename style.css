@@ -412,11 +412,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
 }
-@media(max-width:600){
-    .content2{
-        flex-direction: column;
-    }
-}
+
 .home-btn-2{
     font-size: 1.5em;
     background-color: rgba(0, 0, 0, 0.5);
@@ -502,4 +498,30 @@ body, html {
 }
 .home-btn-1,.home-btn-2,.home-btn-3,.home-btn-4{
     cursor: pointer;
+}
+@media(max-width:600px){
+    .panel4 h1{
+        text-align: center;
+    }
+    .panel2 h1{
+        text-align: center;
+    }
+    .panel3 h1{
+        text-align: center;
+    }
+    .content4{
+        flex-direction: column;
+        text-align: center;
+    }
+    .content2{
+        flex-direction: column;
+        text-align: center;
+    }
+    .panel3 .text2{
+        text-align: center;
+    }
+    .content3{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 }
