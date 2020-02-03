@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/dcf2e7c08d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header>
+        <div class="logo">ENQUIZTA</div>
+        <a href="index.html" class="home">HOME</a>
+        <a href="#" class="quizPage active-page">QUIZ</a>
+        <i class="fa fa-bars hidden-bgr"></i>
+    </header>
+    <aside>
+        <div class="visible-area">
+            <i class="close-btn">&times;</i>
+            <div onclick="setQuiz(HTML_Quiz)" class="">HTML</div>
+            <div onclick="setQuiz(CSS_Quiz)" class="">CSS</div>
+            <div onclick="setQuiz(JS_Quiz)"class="">JS</div>
+        </div>
+        
+    </aside>
+    <div class="pull-tab fa fa-angle-right"></div>
+    <div class="main">
+        <div class="main-visible">
+            <div class="start-quiz" onclick="startQuiz()">START QUIZ</div>
+            <div class="quiz">
+                <div class="util">
+                    <div class="qno">
+                        Question 1
+                    </div>
+                    <div class="clock">
+                        <div class="clockback"></div>
+                        <i class="fas fa-stopwatch"></i>
+                        <div class="secs">15</div>
+                    </div>
+                </div>
+                <div class="question">
+                    The full form of html is?
+                </div>
+                <div class="ans-row">
+                    <div id="a" class="answer">Hypertext markup Language</div>
+                    <div id="b" class="answer">Hypertext makeup Language</div>
+                </div>
+                <div class="ans-row">
+                    <div id="c" class="answer">Hightext markup Language</div>
+                    <div id="d" class="answer">Hightext makeup Language</div>
+                </div>
+                <div class="buttons">
+                    <div onclick="checkAnswer()" class="nxt">SUBMIT</div>
+                    <div onclick="wrongAnswer()" class="pass">PASS</div>
+                </div>
+            </div>
+            <div class="result">
+                <h1>You scored: <span class="score">80</span></h1>
+                <h3>Questions you answered Wrong</h3>
+                <div class="exp-container">
+                </div>
+                <div class="take-quiz" onclick="takeAnotherQuiz()">Take Another Quiz</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
