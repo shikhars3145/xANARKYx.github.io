@@ -253,6 +253,8 @@ let showQuestion = ()=>{
             element.classList.remove("correct");
         });
         curr_time = 0;
+        clearInterval(stop);
+        stop=setInterval(timer,1000);
         document.querySelector(".clock .secs").style.color="#fff";
         document.querySelector(".qno").innerHTML = "Question "+(curr_ques+1).toString();
         document.querySelector(".clock .secs").innerHTML=qTime-curr_time;
@@ -328,11 +330,11 @@ let wrongAnswer= ()=>{
 let correctAnswer = ()=>{
     score = score+20;
     curr_ques++;
-    setTimeout(showQuestion, 2000);
+    setTimeout(showQuestion, 1000);
     
 }
 let checkAnswer= ()=>{
-    clearInterval(stop);
+    
     let ans = document.querySelector(".selected");
     if(ans.id==curr_quiz[curr_ques].correctOption)
     {
@@ -341,7 +343,7 @@ let checkAnswer= ()=>{
     }
     else{
         ans.classList.add("wrong");
-        setTimeout(wrongAnswer, 2000);
+        setTimeout(wrongAnswer, 1000);
     }
 }
 
