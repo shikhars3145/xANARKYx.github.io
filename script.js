@@ -160,6 +160,30 @@ options.forEach(element => {
     })
 });
 
+
+/**
+ *                                  same as above but event is passed in callback function
+ * 
+ * 
+ * handleEvent = (event)=>{
+    
+    options.forEach(ele=>{
+        if(ele.classList.contains("selected"))
+        {
+            ele.classList.remove("selected")                            //removes selected class from all answers then adds selected class on the clicked element
+        }
+    event.target.classList.add("selected");
+    })
+
+}
+
+
+let options = document.querySelectorAll(".answer");
+options.forEach(element => {
+    element.addEventListener("click",handleEvent)
+});
+ */
+
 class Question
 {
     constructor(text,ans1,ans2,ans3,ans4,correctOption,explanation)
